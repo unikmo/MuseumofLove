@@ -1,0 +1,4 @@
+import "./globals.css";
+export const metadata={title:"Museum of Love",description:"100 stories. Every month."};
+const nav=[["Visit","/visit"],["100 Stories","/100-stories"],["Story Room","/story-room"],["Love Office","/love-office"],["Online Museum","/online-museum"]];
+export default function RootLayout({children}){return <html lang="en"><body><header><a className="brand" href="/">MUSEUM <i>OF</i> LOVE</a><nav>{nav.map(([n,u])=><a key={u} href={u}>{n}</a>)}</nav><a className="button small" href="/share-your-story">Share Your Story</a></header>{children}<footer><div className="brand">MUSEUM <i>OF</i> LOVE</div><div>100 stories. Every month.</div><div className="footlinks">{nav.map(([n,u])=><a key={u} href={u}>{n}</a>)}<a href="/about">About</a><a href="/faq">FAQ</a></div><small>Concept-stage website. Final location, opening hours, ticketing and operating details will be published once confirmed.</small></footer></body></html>}
